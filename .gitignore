@@ -1,0 +1,8 @@
+
+#venv
+env/
+
+__pycache__/
+
+#The clippings, both json parsed and .txt
+assets/*

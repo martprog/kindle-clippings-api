@@ -1,0 +1,11 @@
+
+extract:
+  enabled: true
+  source_path: "/path/to/kindle/mount"
+  destination_path: "assets/my_clippings.txt" 
+
+parse:
+  enabled: true
+  source_file: "assets/my_clippings.txt"
+  output_file: "assets/myquotes.json"
+
