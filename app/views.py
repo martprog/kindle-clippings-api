@@ -4,16 +4,22 @@ from parse import read_json_file
 data_bp= Blueprint("data_bp", __name__)
 
 @data_bp.route('/all', methods=['GET'])
-def get_sentiment(quote_id):
-    pass
-    
+def get_all_clipings():
+    data = read_json_file()
+    if data is None:
+        return jsonify({'error': 'Oops... no data available. Check that your clippings exists and are in the right path'})
+    else:
+        return jsonify({"query": "All Records", "data":data})
+
 
 
 @data_bp.route('/author', methods=['GET'])
 def get_author():
     data = read_json_file()
+    if data is None:
+        return jsonify({'error': 'Oops... no data available. Check that your clippings exists and are in the right path'})
     query = request.args.get('name', None)
-    
+
     if query is not None:
         matching_authors = [quote for quote in data if query.lower() in quote.get('author', '').lower()]
         if matching_authors:
