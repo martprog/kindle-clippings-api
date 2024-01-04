@@ -1,8 +1,9 @@
 
 extract:
-  enabled: true
+  enabled: false
   source_path: "/path/to/kindle/mount"
-  destination_path: "assets/my_clippings.txt" 
+  destination_path: "assets/my_clippings.txt"
+  which_os: "Linux"
 
 parse:
   enabled: true
