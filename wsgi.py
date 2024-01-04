@@ -6,6 +6,7 @@ from parse import parse_to_json
 config = read_config()
 dest_folder = config['extract']['destination_path']
 used_os=config['extract']['which_os']
+
 try:
     if config['extract']['enabled']:
         copy_kindle_clippings(dest_folder, used_os)
@@ -19,4 +20,4 @@ else:
         print(f"Error during parse_to_json: {str(parse_error)}")
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run()
