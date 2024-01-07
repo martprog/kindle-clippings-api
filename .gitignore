@@ -6,4 +6,6 @@ __pycache__/
 
 #The clippings, both json parsed and .txt
 assets/*
-!assets/.gitkeep
+#!assets/.gitkeep
+!assets/my_clippings_test.txt
+#Note: in case we remove the _test file, we should go back to .gitkeep
